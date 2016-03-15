@@ -18,8 +18,9 @@ h2 {
 .clearfix {
   clear: both;
 }
-.background {
+.container {
   background-color: #eee;
+  min-width: 768px;
 }
 .left-team {
   width: 160px;
