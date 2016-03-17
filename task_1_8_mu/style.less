@@ -1,0 +1,80 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.container{
+	width: 100%;
+	margin: 10px 0;
+}
+
+.row{
+	box-sizing: border-box;
+	*zoom: 1;
+	margin: 0 10px;
+}
+
+// 清除浮动
+
+.row:before,
+.row:after{
+	content: "";
+	display: table;
+}
+
+.row:after{
+	clear: both;
+}
+
+// column
+// col还是百分比，其padding依靠添加内部div实现
+
+[class*='col-']{
+	box-sizing: border-box;
+	float: left;
+	min-width: 8.33%;
+	padding: 10px;	
+	& > div{
+		box-sizing: border-box;
+		border: 1px solid #999;
+		background-color: #eee;
+		height: 50px;
+	}
+}
+
+@media (min-width: 768px){
+	.col-md-6 {
+	  width: 50%;
+	}
+	.col-md-4 {
+	  width: 33.33333333%;
+	}
+	.col-md-3 {
+	  width: 25%;
+	}
+	.col-md-2 {
+	  width: 16.66666667%;
+	}
+	.col-md-1 {
+	  width: 8.33333333%;
+	}
+}
+
+
+@media (max-width: 768px) {
+	.col-xs-12 {
+	  width: 100%;
+	}
+	.col-xs-8 {
+	  width: 66.66666667%;
+	}
+	.col-xs-6 {
+	  width: 50%;
+	}
+	.col-xs-3 {
+	  width: 25%;
+	}
+	.col-xs-2 {
+	  width: 16.66666667%;
+	}
+}
