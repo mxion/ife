@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+  background-color: #f1f1f1;
+}
+section {
+  margin: 25px;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+.ui-table {
+  border-spacing: 0;
+  text-align: left;
+}
+.ui-table th,
+.ui-table td {
+  padding: 12px 18px;
+}
+.ui-table thead > tr {
+  background-color: #333;
+  color: white;
+}
+.ui-table tbody tr:nth-child(even) {
+  background-color: #ddd;
+}
+.ui-table tbody tr:nth-child(1),
+.ui-table tbody tr:nth-child(2),
+.ui-table tbody tr:nth-child(3) {
+  color: red;
+}
+.ui-form .flex-input {
+  width: 160px;
+  height: 24px;
+  transition: width 0.5s ease-in-out;
+}
+.ui-form .flex-input:focus {
+  width: 310px;
+}
+.ui-banner {
+  height: 240px;
+  width: 310px;
+  position: relative;
+  overflow: hidden;
+  background-color: pink;
+}
+.ui-banner .ui-banner-tabs {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+}
+.ui-banner .ui-banner-tabs label {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  line-height: 40px;
+}
+.ui-banner .ui-banner-content {
+  position: absolute;
+  width: 300%;
+  height: 100%;
+  list-style-type: none;
+  transition: left 0.5s ease-in-out;
+}
+.ui-banner .ui-banner-content .banner {
+  width: 310px;
+  height: 100%;
+  float: left;
+}
+.ui-banner .ui-banner-content .banner-1 {
+  background-color: orange;
+}
+.ui-banner .ui-banner-content .banner-2 {
+  background-color: lightblue;
+}
+.ui-banner .ui-banner-content .banner-3 {
+  background-color: pink;
+}
+.ui-banner #tab-1:checked ~ .ui-banner-content {
+  left: 0;
+}
+.ui-banner #tab-2:checked ~ .ui-banner-content {
+  left: -100%;
+}
+.ui-banner #tab-3:checked ~ .ui-banner-content {
+  left: -200%;
+}

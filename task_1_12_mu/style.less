@@ -1,0 +1,113 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+html,body{
+	height: 100%;
+	background-color: #f1f1f1;
+}
+
+section{
+	margin: 25px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+} 
+
+
+
+// part 1: table
+.ui-table{
+	border-spacing: 0;
+	text-align: left;
+	th,td{
+		padding: 12px 18px;
+	}
+	thead > tr{
+		background-color: #333;
+		color: white;
+	}
+	tbody{
+		tr:nth-child(even){
+			background-color: #ddd;
+		}
+		tr:nth-child(1), tr:nth-child(2), tr:nth-child(3){
+			color: red;
+		}
+	}
+}
+
+// part 2: input animation
+.ui-form{
+	.flex-input{
+		width: 160px;
+		height: 24px;
+		transition: width .5s ease-in-out;
+		&:focus{
+			width: 310px;
+		}
+	}
+}
+
+// part 3: banner carousel
+.ui-banner{
+	height: 240px;
+	width: 310px;
+	position: relative;
+	overflow: hidden;
+	background-color: pink;
+	.ui-banner-tabs{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		z-index: 50;
+		label{
+			display: inline-block;
+			height: 40px;
+			width: 40px;
+			color: white;
+			background-color: rgba(255, 255, 255, 0.5);
+			text-align: center;
+			line-height: 40px;
+		}
+	}
+	.ui-banner-content{
+		position: absolute;
+		width: 300%;
+		height: 100%;
+		list-style-type: none;
+		transition: left .5s ease-in-out;
+		.banner{
+			width: 310px;
+			height: 100%;
+			float: left;
+		}
+		.banner-1{
+			background-color: orange;
+		}
+		.banner-2{
+			background-color: lightblue;
+		}
+		.banner-3{
+			background-color: pink;
+		}
+	}
+	// control banner
+	#tab-1:checked~.ui-banner-content{
+		left: 0;
+	}
+	#tab-2:checked~.ui-banner-content{
+		left: -100%;
+	}
+	#tab-3:checked~.ui-banner-content{
+		left: -200%;
+	}
+}
