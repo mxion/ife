@@ -21,8 +21,20 @@ h2{
 	border: 1px solid #999;
 }
 
-.clearfix{
+// 清除浮动
+
+.clearfix:before,
+.clearfix:after{
+	content: "";
+	display: table;
+}
+
+.clearfix:after{
 	clear: both;
+}
+
+.clearfix{
+	*zoom: 1;
 }
 
 

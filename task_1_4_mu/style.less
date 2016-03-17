@@ -1,0 +1,43 @@
+// clear browser
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,body{
+	height: 100%;
+}
+
+// center in flex way
+
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	.boxset{
+		position: relative;
+		background-color: #ccc;
+		height: 200px;
+		width: 400px;
+		.corner{
+			position: absolute;
+			background-color: #fc0;
+			width: 50px;
+			height: 50px;
+		}
+		.left-top-corner{
+			top: 0;
+			left: 0;
+			border-radius: 0 0 50px 0;
+		}
+		.right-bottom-corner{
+			bottom: 0;
+			right: 0;
+			border-radius: 50px 0 0 0;
+		}
+	}
+}
+
+// could also archieve in transform..
